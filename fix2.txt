@@ -1,1 +1,87 @@
-"fix2 content" 
+git init 
+
+git branch -m main
+
+echo duck > README.md
+
+echo moose >> README.md
+
+echo cat >> README.md
+
+git add README.md
+
+git commit -m “Initial commit”
+
+git checkout -b feature1
+
+echo dog >> README.md
+
+git add README.md
+
+git commit -m “Replaced moose with mouse and added dog”
+
+git checkout main
+
+
+git add README.md
+
+git commit -m “Changed moose to mahmut”
+
+git checkout main
+
+git merge feature1
+
+Det blir en konflikt
+notepad README.md
+(Redigerade i notepad)
+
+git add README.md
+
+git commit -m “Resolved merge conflict and finalized merge of feature1 into main”
+
+git checkout main 
+
+git merge feature1
+(Konflikten löst)
+
+git tag extinct
+
+git log --oneline
+
+git reset --hard e892a72
+
+type README.md 
+(visar nu bara duck, mahmut, cat)
+
+git branch feature2
+
+notepad README.md
+
+type README.md
+
+git add README.md 
+
+git commit -m “Capitalized animal names”
+
+git checkout feature2 
+
+echo “This is fix1” > fix1.txt
+
+git add fix1.txt
+
+git commit -m “Added fix1.txt”
+
+echo “This is fix2” > fix2.txt
+
+git add fix2.txt
+
+git commit -m “Added fix2.txt”
+
+git checkout main 
+
+dir (fix1 och fix2 är inte där)
+
+git log feature2 --oneline
+
+git cherry-pick 079e82a
+
