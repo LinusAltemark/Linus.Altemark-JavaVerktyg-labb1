@@ -1,3 +1,5 @@
-"duck" 
-"moose" 
-"cat" 
+duck
+mahmut
+mouse
+cat
+dog
